@@ -1,39 +1,3 @@
-// import React from "react";
-// import "../App.css";
-// function decodeHTMLEntities(text) {
-//   const textarea = document.createElement("textarea");
-//   textarea.innerHTML = text;
-//   return textarea.value;
-// }
-
-// const Card = ({ data, selftext_html }) => {
-//   const { title, selftext, url, score } = data;
-//   const decodedHtml = decodeHTMLEntities(selftext);
-
-//   return (
-//     <div className="card">
-//       <h2>{title}</h2>
-//       {selftext_html && (
-//         <div
-//           className="selftext"
-//           dangerouslySetInnerHTML={{ __html: decodedHtml }}
-//         >
-//           {/* <p>{selftext}</p> */}
-//           {console.log(decodedHtml)}
-//         </div>
-//       )}
-//       <div className="meta">
-//         <p>Score: {score}</p>
-//         <a href={url} target="_blank" rel="noopener noreferrer" className="url">
-//           Read more
-//         </a>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Card;
-
 import React from "react";
 import "../App.css";
 
