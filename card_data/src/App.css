@@ -17,7 +17,7 @@ body {
 .title h1 {
   text-align: center;
   font-size: 2.5rem;
-  color: #0070f3;
+  color: #9d4edd;
   margin-bottom: 40px;
 }
 
@@ -30,7 +30,7 @@ body {
 
 /* Individual card styling */
 .card {
-  background: #ffffff;
+  /* background: #ffffff; */
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 112, 243, 0.1);
@@ -39,6 +39,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.card-container .card:nth-child(odd) {
+  background: linear-gradient(to bottom, #efe6ff, #ffffff);
+}
+
+.card-container .card:nth-child(even) {
+  background: linear-gradient(to bottom, #fffbe6, #ffffff);
+}
+
 
 .card:hover {
   transform: translateY(-4px);
@@ -49,7 +57,7 @@ body {
 .card h2 {
   font-size: 1.25rem;
   margin-bottom: 12px;
-  color: #0070f3;
+  color: #05101d;
 }
 
 /* Self text (if available) */

@@ -1,10 +1,12 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Card from "../components/Card";
 import "../App.css";
 
 const CardData = () => {
   const [posts, setPosts] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(10);
+  const loaderRef = useRef(null);
 
   useEffect(() => {
     fetch("https://www.reddit.com/r/reactjs.json")
@@ -14,6 +16,23 @@ const CardData = () => {
       })
       .catch((error) => console.error("Error fetching Reddit posts:", error));
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const target = entries[0];
+      if (target.isIntersecting) {
+        setVisibleCount((prev) => prev + 10);
+      }
+    });
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => {
+      if (loaderRef.current) observer.unobserve(loaderRef.current);
+    };
+  }, [loaderRef]);
   return (
     <div className="container">
       <div className="title">
