@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f2f9ff, #d6eaff);
+  color: #333;
+}
+
+/* Container for all content */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Page title */
+.title h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0070f3;
+  margin-bottom: 40px;
+}
+
+/* Card grid container */
+.card-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Individual card styling */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 112, 243, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 112, 243, 0.15);
+}
+
+/* Post title */
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #0070f3;
+}
+
+/* Self text (if available) */
+.card .selftext {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+/* Score and URL */
+.card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .url{
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 110, 196, 0.3);
+}
+.card .url:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(120, 115, 245, 0.4);
+}
+
+.card .meta p {
+  margin: 0;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.card a:hover {
+  color: #0055aa;
+}
