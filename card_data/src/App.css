@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: auto;
 }
 .card-container .card:nth-child(odd) {
   background: linear-gradient(to bottom, #efe6ff, #ffffff);
@@ -67,7 +68,12 @@ body {
   margin-bottom: 12px;
   line-height: 1.5;
   max-height: 180px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: auto
+  /* p {
+    color: red;
+    font-size: large;
+  } */
 }
 
 /* Score and URL */
